@@ -1,0 +1,317 @@
+img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+body {
+  margin:0;
+  font-family: 'Georgia', serif;
+  background-color:#f4f1f8;
+  color:#2f3e46;
+}
+
+/* NAVIGATION */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3a5a40;
+  padding:40px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.navbar-toggler i{
+   color:#f4f1f8;
+}
+
+.navbar-toggler{
+  border:none;
+}
+
+.navbar-nav{
+  gap:1.5rem;
+}
+
+.nav-link{
+  color: #f1faee;
+  font-weight: bold;
+}
+
+.nav-link a:hover {
+  color: #2f3e46;
+}
+
+.dropdown-item:hover{
+  background-color:  #e5989b;
+}
+
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap:1.5rem;
+}
+
+.nav-right i{
+  font-size: 1.25rem;
+  color: #f1faee;
+}
+
+.nav-right i:hover{
+  color:  #e5989b;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color:#f1faee;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/espaces-verts.jpg") center/cover no-repeat;
+  z-index: -2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(58, 90, 64, 0.75),
+    rgba(109, 89, 122, 0.65)
+  );
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* SECTIONS */
+.section-title {
+  text-align:center;
+  margin-bottom:40px;
+  font-size:2rem;
+  color:#6d597a;
+}
+
+.div-img{
+  width: 30%;
+}
+
+.culture2{
+  background:#2f3e46;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.services2{
+  background: #3a5a40;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.culture1,
+.services1,
+.culture2,
+.services2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 40px;
+}
+
+.texte-droite,
+.texte-gauche{
+  width: 30%;
+}
+
+.texte-gauche{
+  text-align: right;
+  color: #f1faee;
+}
+
+/* ARTICLES */
+.articles {
+  display:flex;
+  justify-content: center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  flex:1 1 320px;
+  max-width:400px;
+  background:white;
+  padding:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article img {
+  width:100%;
+  height:250px;
+}
+
+.article p {
+  margin-top:15px;
+  flex-grow: 1;
+}
+
+.article a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #3a5a40;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.article h3{
+  margin-top:20px;
+}
+
+.agenda{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* IMAGES HOVER */
+.img-hover img {
+  display: block;
+  transition: transform 0.3s ease; /* suaviza el movimiento */
+}
+
+.img-hover:hover img {
+  transform: translateY(-10px); /* sube 10px al pasar el cursor */
+}
+
+/* FOOTER */
+.footer {
+  background: #2f3e46;
+  color: white;
+  padding: 40px;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.footer-content div {
+  flex: 1 1 200px;
+}
+
+.footer h4 {
+  margin-bottom: 20px;
+}
+
+.footer a {
+  display: block;
+  color: #e5989b;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-social-icon{
+  display: flex;
+  gap:30px;
+}
+
+.footer-social i {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.footer .copyright{
+  text-align:center;
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .culture1,
+  .services1{
+    flex-direction: column;
+  }
+
+  .culture2,
+  .services2{
+    flex-direction: column-reverse;
+  }
+
+  .texte-droite,
+  .texte-gauche{
+    width: 80%;
+  }
+
+  .texte-gauche{
+    text-align: left;
+  }
+
+  .div-img{
+    width: 80%;
+  }
+
+  .agenda{
+    padding:0;
+  }
+}
